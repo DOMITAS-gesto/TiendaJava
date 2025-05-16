@@ -3,10 +3,10 @@
  * Implementa la interfaz Vendible para asegurar que tenga el comportamiento requerido.
  */
 public class Producto implements Vendible {
-    // Atributos con modificadores de acceso adecuados
-    private String nombre;          // Encapsulado - solo accesible mediante métodos
-    private double precio;          // Encapsulado - solo accesible mediante métodos
-    private int cantidadDisponible; // Encapsulado - solo accesible mediante métodos
+
+    private String nombre;          // Solo accesible mediante métodos
+    private double precio;          // Solo accesible mediante métodos
+    private int cantidadDisponible; // Solo accesible mediante métodos
 
     /**
      * Constructor que inicializa todos los atributos del producto

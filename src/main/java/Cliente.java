@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,5 +84,34 @@ public class Cliente {
         } else {
             System.out.println("Formato de correo inválido");
         }
+    }
+}
+
+/**
+ * Clase auxiliar que representa una compra individual en el historial del cliente
+ */
+class Compra {
+    private Producto producto;
+    private int cantidad;
+    private double precioUnitario;
+    private LocalDateTime fechaCompra;
+
+    public Compra(Producto producto, int cantidad, double precioUnitario) {
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.precioUnitario = precioUnitario;
+        this.fechaCompra = LocalDateTime.now();
+    }
+
+    public double getTotal() {
+        return cantidad * precioUnitario;
+    }
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        return fechaCompra.format(formatter) + " - " +
+                producto.getNombre() + " x" + cantidad +
+                " ($" + precioUnitario + " c/u) = $" + getTotal();
     }
 }
