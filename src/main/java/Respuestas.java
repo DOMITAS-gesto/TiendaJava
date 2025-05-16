@@ -28,6 +28,25 @@ public class Respuestas {
             git push -u origin main
 
             De este modo ya podremos ver los archivos en el repositorio de GitHub.
+
+
+    ¿Para que sirve el archivo .gitignore?
+        R// Este archivo sirve para excluir distintos archivos que no sean deseados, en este caso se excluyen los
+        archivos .class y bin/ con el comando:
+
+        touch .gitignore
+
+        Y luego escribiendo el tipo de archivos que no queremos dentro de .gitignore. (Ejemplo: .class o bin/)
+
+    ¿Como se puede trabajar en equipo usando ramas en Git y GitHub?
+        R// Las ramas le permiten a distintas personas trabajar en un proyecto a la vez sin interferir entre si, primero
+            hay que crear la rama con el comando:
+
+            git checkout -b <RamaEjemplo>
+
+            Ahora ya estamos ubicados en la nueva rama, otro compañero puede crea otra rama y trabajar desde ella para
+            subir sus cambios, una vez hecho esto solo hay que hacer el commit y asi se guardarian los cambios desde la
+            rama
             */
 
 
